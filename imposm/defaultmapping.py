@@ -145,7 +145,16 @@ buildings = Polygons(
     mapping = {
         'building': (
             '__any__',
-    )}
+    )},
+    fields = (
+		('addr:interpolation',String()),
+		('addr:inclusion',String()),
+		('addr:housenumber',String()),
+		('addr:housename',String()),
+		('addr:street',String()),
+		('addr:postcode',String()),
+		('addr:city',String()),
+	),
 )
 
 minorroads = Highway(
@@ -165,15 +174,6 @@ minorroads = Highway(
             'unclassified',
             'residential',
     )},
-    fields = (
-		('addr:interpolation',String()),
-		('addr:inclusion',String()),
-		('addr:housenumber',String()),
-		('addr:housename',String()),
-		('addr:street',String()),
-		('addr:postcode',String()),
-		('addr:city',String()),
-	),
 )
 
 transport_points = Points(
@@ -397,6 +397,7 @@ amenities = Points(
             'police',
             'townhall',
         ),
+}
     fields = (
 		('addr:interpolation',String()),
 		('addr:inclusion',String()),
@@ -406,7 +407,7 @@ amenities = Points(
 		('addr:postcode',String()),
 		('addr:city',String()),
 	),
-})
+)
 
 motorways_gen1 = GeneralizedTable(
     name = 'motorways_gen1',
