@@ -164,13 +164,29 @@ minorroads = Highway(
             'living_street',
             'unclassified',
             'residential',
-    )}
+    )},
+    fields = (
+		('addr:interpolation',String()),
+		('addr:inclusion',String()),
+		('addr:housenumber',String()),
+		('addr:housename',String()),
+		('addr:street',String()),
+		('addr:postcode',String()),
+		('addr:city',String()),
+	),
 )
 
 transport_points = Points(
     name = 'transport_points',
     fields = (
         ('ref', String()),
+        ('addr:interpolation',String()),
+		('addr:inclusion',String()),
+		('addr:housenumber',String()),
+		('addr:housename',String()),
+		('addr:street',String()),
+		('addr:postcode',String()),
+		('addr:city',String()),
     ),
     mapping = {
         'highway': (
@@ -305,6 +321,13 @@ landusages = Polygons(
             'railway',
             'land',
         ])),
+        ('addr:interpolation',String()),
+		('addr:inclusion',String()),
+		('addr:housenumber',String()),
+		('addr:housename',String()),
+		('addr:street',String()),
+		('addr:postcode',String()),
+		('addr:city',String()),
     ),
     mapping = {
         'landuse': (
@@ -374,6 +397,15 @@ amenities = Points(
             'police',
             'townhall',
         ),
+    fields = (
+		('addr:interpolation',String()),
+		('addr:inclusion',String()),
+		('addr:housenumber',String()),
+		('addr:housename',String()),
+		('addr:street',String()),
+		('addr:postcode',String()),
+		('addr:city',String()),
+	),
 })
 
 motorways_gen1 = GeneralizedTable(
