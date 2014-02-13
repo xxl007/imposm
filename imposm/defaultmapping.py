@@ -397,7 +397,7 @@ amenities = Points(
             'police',
             'townhall',
         ),
-}
+    },
     fields = (
 		('addr:interpolation',String()),
 		('addr:inclusion',String()),
